@@ -1,0 +1,28 @@
+<UserControl x:Class="FractalLab.Midpoint.MidpointPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Margin="6">
+            <WrapPanel>
+                <TextBlock Text="Высота слева:" VerticalAlignment="Center"/>
+                <TextBox x:Name="LeftHeightBox" Width="50" Margin="4,0,14,0" Text="80"
+                         TextChanged="Param_TextChanged"/>
+                <TextBlock Text="Высота справа:" VerticalAlignment="Center"/>
+                <TextBox x:Name="RightHeightBox" Width="50" Margin="4,0,14,0" Text="30"
+                         TextChanged="Param_TextChanged"/>
+                <TextBlock Text="Начальный разброс:" VerticalAlignment="Center"/>
+                <TextBox x:Name="SpreadBox" Width="50" Margin="4,0,14,0" Text="140"
+                         TextChanged="Param_TextChanged"/>
+                <TextBlock Text="Затухание (0.3-0.9):" VerticalAlignment="Center"/>
+                <TextBox x:Name="FactorBox" Width="50" Margin="4,0,14,0" Text="0.55"
+                         TextChanged="Param_TextChanged"/>
+                <Button Content="Шаг +" Click="StepPlusClick" Margin="0,0,6,0"/>
+                <Button Content="Шаг -" Click="StepMinusClick" Margin="0,0,14,0"/>
+                <Button Content="Заново (новая случайность)" Click="RestartClick"/>
+            </WrapPanel>
+        </StackPanel>
+        <TextBlock x:Name="StatusText" DockPanel.Dock="Bottom" Margin="6" Foreground="DarkGreen"/>
+        <Canvas x:Name="DrawCanvas" Background="WhiteSmoke" ClipToBounds="True"
+                SizeChanged="DrawCanvas_SizeChanged"/>
+    </DockPanel>
+</UserControl>

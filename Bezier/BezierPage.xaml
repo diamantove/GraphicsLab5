@@ -1,0 +1,21 @@
+<UserControl x:Class="FractalLab.Bezier.BezierPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Margin="6">
+            <WrapPanel>
+                <Button Content="Очистить" Click="ClearClick" Margin="0,0,14,0"/>
+                <Button Content="Пример" Click="SampleClick" Margin="0,0,14,0"/>
+                <TextBlock Text="Клик = добавить точку, перетаскивание = переместить, правый клик по точке = удалить"
+                           VerticalAlignment="Center" Foreground="Gray"/>
+            </WrapPanel>
+        </StackPanel>
+        <TextBlock x:Name="StatusText" DockPanel.Dock="Bottom" Margin="6" Foreground="DarkGreen"/>
+        <Canvas x:Name="DrawCanvas" Background="White" ClipToBounds="True"
+                MouseLeftButtonDown="CanvasLeftDown"
+                MouseMove="CanvasMove"
+                MouseLeftButtonUp="CanvasUp"
+                MouseRightButtonDown="CanvasRightDown"
+                SizeChanged="DrawCanvas_SizeChanged"/>
+    </DockPanel>
+</UserControl>

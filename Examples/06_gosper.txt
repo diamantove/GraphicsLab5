@@ -1,0 +1,4 @@
+# кривая Госсера (flowsnake)
+A 60 0 AB
+A A-B--B+A++AA+B-
+B +A-BB--B-A++A+B

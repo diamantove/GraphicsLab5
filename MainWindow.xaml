@@ -1,0 +1,23 @@
+<Window x:Class="FractalLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lsys="clr-namespace:FractalLab.LSystems"
+        xmlns:mid="clr-namespace:FractalLab.Midpoint"
+        xmlns:bez="clr-namespace:FractalLab.Bezier"
+        Title="Лабораторная 5: L-системы, midpoint displacement, кривые Безье"
+        Height="780" Width="1200">
+    <TabControl>
+        <TabItem Header="1.a L-системы">
+            <lsys:LSystemPage/>
+        </TabItem>
+        <TabItem Header="1.б Фрактальное дерево">
+            <lsys:TreePage/>
+        </TabItem>
+        <TabItem Header="2. Горы (midpoint displacement)">
+            <mid:MidpointPage/>
+        </TabItem>
+        <TabItem Header="3. Составная кривая Безье">
+            <bez:BezierPage/>
+        </TabItem>
+    </TabControl>
+</Window>
